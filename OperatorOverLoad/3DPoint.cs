@@ -66,6 +66,21 @@ namespace OperatorOverLoad
             return p1flag ^ p2flag;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj is _3DPoint)
+            {
+                _3DPoint p = (_3DPoint)obj;
+                return p.X == this.X && p.Y == this.Y && p.Z == this.Z; ;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)Math.Sqrt(X * X + Y * Y + Z * Z);
+        }
+
 
         public override string ToString()
         {
