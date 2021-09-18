@@ -7,13 +7,24 @@ namespace OperatorOverLoad
         static void Main(string[] args)
         {
             #region _3DPoint
-            _3DPoint p1 = new _3DPoint(2, 2, 5);
-            _3DPoint p2 = new _3DPoint(2, 2, 5);
+            _3DPoint p1 = new _3DPoint(2, 8, 5);
+            _3DPoint p2 = new _3DPoint(9, 1, 3);
 
             if(p1 == p2)
               Console.WriteLine("Data Equal");
             else
               Console.WriteLine("Data Not equal");
+
+            
+            Console.WriteLine(p1++);
+            Console.WriteLine(p1);
+            Console.WriteLine(++p1);
+
+            Console.WriteLine(p1 & p2);
+            Console.WriteLine(p1 | p1);
+            Console.WriteLine(p1 | p2);
+            Console.WriteLine(p1 ^ p2);
+
             #endregion
 
             #region Fraction

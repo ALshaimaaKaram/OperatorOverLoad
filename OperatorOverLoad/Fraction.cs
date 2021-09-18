@@ -44,6 +44,14 @@ namespace OperatorOverLoad
             return res;
         }
 
+        public static Fraction operator-(Fraction f1, Fraction f2)
+        {
+            Fraction res = new Fraction();
+            res.numer = f1.numer * f2.denom - f2.numer * f1.denom;
+            res.denom = f1.denom * f2.denom;
+            return res;
+        }
+
         public static implicit operator Fraction(int x)
         {
             return new Fraction(x, 1); ;
